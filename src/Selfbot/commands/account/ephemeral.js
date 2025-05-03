@@ -1,4 +1,4 @@
-const { Client, Message } = require("discord.js-selfbot-v13");
+const { Client, Message, MessageAttachment } = require("discord.js-selfbot-v13");
 
 module.exports = {
     name: "ephemeral",
@@ -36,8 +36,8 @@ module.exports = {
                     message.mentions.users.first()?.dmChannel ||
                     client.users.cache.get(args[1])?.dmChannel;
 
-                const guild = client.guilds.cache.get(args[0]) ||
-                    client.guilds.cache.find(g => g.name.toLowerCase().includes(args[0]?.toLowerCase));
+                const guild = client.guilds.cache.get(args[1]) ||
+                    client.guilds.cache.find(g => g.name.toLowerCase().includes(args[1]?.toLowerCase));
 
                 if (!channel && !guild) return message.edit(`***Aucun salon ou serveur de trouvé pour \`${args[1] ?? 'rien'}\`***`);
 
@@ -72,36 +72,32 @@ module.exports = {
                 }
 
 
-                const channel2 = message.mentions.channels.first() ||
-                    client.channels.cache.get(args[1]) ||
-                    message.mentions.users.first()?.dmChannel ||
-                    client.users.cache.get(args[1])?.dmChannel;
-
-                const guild2 = client.guilds.cache.get(args[0]) ||
-                    client.guilds.cache.find(g => g.name.toLowerCase().includes(args[0]?.toLowerCase));
-
-                if (!channel2 && !guild2) return message.edit(`***Aucun salon ou serveur de trouvé pour \`${args[1] ?? 'rien'}\`***`);
-                
-                if (channel){
-                    if (!client.db.ephemeral.channels.includes(channel2.id))
-                        return message.edit(`***Le salon ${channel2} n'est pas whitelist***`);
+                if (client.db.ephemeral.channels.includes(args[1])){
+                    if (!client.db.ephemeral.channels.includes(args[1]))
+                        return message.edit(`***Le salon ${args[1]} n'est pas whitelist***`);
     
-                    client.db.ephemeral.channels = client.db.ephemeral.channels.filter(id => id !== channel2.id);
+                    client.db.ephemeral.channels = client.db.ephemeral.channels.filter(id => id !== args[1]);
                     client.save();
 
-                    return message.edit(`***Le salon ${channel2} a été retiré de la whitelist***`);
+                    return message.edit(`***Le salon avec comme ID \`${args[1]}\` a été retiré de la whitelist***`);
                 }
 
-                if (guild2){
-                    if (!client.db.ephemeral.guilds.includes(guild2.id))
-                        return message.edit(`***Le serveur ${guild2.name} n'est pas whitelist***`);
+                if (client.db.ephemeral.guilds.includes(args[1])){
+                    if (!client.db.ephemeral.guilds.includes(args[1]))
+                        return message.edit(`***Le serveur ${args[1]} n'est pas whitelist***`);
     
-                    client.db.ephemeral.guilds = client.db.ephemeral.guilds.filter(id => id !== guild2.id);
+                    client.db.ephemeral.guilds = client.db.ephemeral.guilds.filter(id => id !== args[1]);
                     client.save();
 
-                    return message.edit(`***Le serveur ${guild2.name} a été retiré de la whitelist***`);
+                    return message.edit(`***Le serveur avec comme ID \`${args[1]}\` a été retiré de la whitelist***`);
                 }
+                else message.edit(`***Aucun salon ou serveur de trouvé pour \`${args[1] ?? 'rien'}\`***`);
+                break;
 
+            case 'list':
+                message.edit(`***Salons:***\n${client.db.ephemeral.channels.length == 0 ? 'Aucun salon' : client.db.ephemeral.channels.map(c => `<#${c}> (\`${c}\`)`).join('\n')}
+                              
+                              ***Serveurs:***\n${client.db.ephemeral.guilds.length == 0 ? 'Aucun serveur' : client.db.ephemeral.guilds.map(c => `${client.guilds.cache.get(c)?.name ?? c} (\`${c}\`)`).join('\n')}`.replaceAll('  ', ''))
                 break;
 
             default:
@@ -112,7 +108,8 @@ module.exports = {
                     `- \`${client.db.prefix}ephemeral wl [guildId]\`・Supprime la suppression d'un serveur`,
                     `- \`${client.db.prefix}ephemeral unwl [channelId]\`・Retire un salon de la whitelist`,
                     `- \`${client.db.prefix}ephemeral unwl [guildId]\`・Retire un serveur de la whitelist`,
-                    `- \`${client.db.prefix}sessions unwl all\`・Réinitialise la whitelist`,
+                    `- \`${client.db.prefix}ephemeral unwl all\`・Réinitialise vos ephemerals`,
+                    `- \`${client.db.prefix}ephemeral list\`・Affiche la liste des salons et serveurs ephemeral`,
                 ];
 
                 if (client.db.type === "image") {
