@@ -1,5 +1,5 @@
 const { Client, Message, MessageAttachment } = require("discord.js-selfbot-v13");
-const page = 'account'
+const page = 'backups'
 
 module.exports = {
     name: page,

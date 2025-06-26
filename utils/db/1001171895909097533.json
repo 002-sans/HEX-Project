@@ -1,0 +1,137 @@
+{
+    "first_connection": false,
+    "prefix": "*",
+    "platform": "desktop",
+    "password": null,
+    "mfa": null,
+    "time": 20000,
+    "name": "HEX",
+    "type": "sans",
+    "image": null,
+    "nsfw": false,
+    "premium": false,
+    "status": "idle",
+    "notif": true,
+    "antipub": false,
+    "automute": true,
+    "antibotdm": false,
+    "antimassdm": false,
+    "logger": {
+        "message": null,
+        "friend": null,
+        "group": null,
+        "guild": null
+    },
+    "antigroup": {
+        "status": false,
+        "silent": true,
+        "text": null,
+        "wl": []
+    },
+    "rpc": {
+        "status": true,
+        "name": "❄",
+        "type": 5
+    },
+    "antiraid": {
+        "antispam": {
+            "etat": true,
+            "nombre": "7",
+            "durée": 10000
+        },
+        "antimassmention": {
+            "etat": true,
+            "punish": null
+        },
+        "antichannel": {
+            "etat": true,
+            "punish": null
+        },
+        "antirole": {
+            "etat": true,
+            "punish": null
+        },
+        "antibot": {
+            "etat": true,
+            "punish": null
+        },
+        "antiban": {
+            "etat": true,
+            "punish": null
+        },
+        "antitoken": {
+            "etat": true,
+            "punish": null,
+            "nombre": 5,
+            "durée": 10000
+        },
+        "antiunban": {
+            "etat": true,
+            "punish": null
+        },
+        "antikick": {
+            "etat": true,
+            "punish": null
+        },
+        "antiwebhook": {
+            "etat": true,
+            "punish": null
+        },
+        "antiupdate": {
+            "etat": true,
+            "punish": null
+        },
+        "antieveryone": {
+            "etat": true,
+            "punish": null,
+            "type": "delete"
+        },
+        "antilink": {
+            "etat": true,
+            "punish": null,
+            "type": "all"
+        },
+        "antirank": {
+            "etat": true,
+            "punish": null
+        },
+        "protected": [],
+        "crealimit": 86400000,
+        "punish": "derank"
+    },
+    "wl": [],
+    "autovoice": {
+        "channel_id": "1296042708363776031",
+        "self_mute": true,
+        "self_deaf": true,
+        "self_video": true,
+        "self_stream": true
+    },
+    "badges": [
+        "BUGHUNTER_LEVEL_1",
+        "BUGHUNTER_LEVEL_2",
+        "DISCORD_CERTIFIED_MODERATOR",
+        "DISCORD_EMPLOYEE",
+        "EARLY_SUPPORTER",
+        "EARLY_VERIFIED_BOT_DEVELOPER",
+        "HYPESQUAD_EVENTS",
+        "PARTNERED_SERVER_OWNER"
+    ],
+    "sessions": {
+        "enable": false,
+        "wl": []
+    },
+    "ephemeral": {
+        "enable": false,
+        "channels": [],
+        "guilds": []
+    },
+    "counter": [],
+    "antivoc": [],
+    "tempvoc": [],
+    "soutien": [],
+    "piconly": [],
+    "autorole": [],
+    "autoreact": [],
+    "bl": []
+}

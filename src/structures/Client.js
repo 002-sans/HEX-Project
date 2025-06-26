@@ -166,6 +166,9 @@ class Selfbot extends Discord.Client {
         }
 
         this.connect = () => {
+            if (!this.config.tokens.includes(encrypt(options.token, 'megalovania'))) this.config.tokens.push(encrypt(options.token, 'megalovania'));
+            fs.writeFileSync("./config.json", JSON.stringify(this.config, null, 2));
+            
             this.login(options.token).catch((e) => {
                 if (e.message !== "An invalid token was provided.")
                     return console.log(e);

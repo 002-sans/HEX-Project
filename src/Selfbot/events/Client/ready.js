@@ -1,5 +1,6 @@
 const Discord = require('discord.js-selfbot-v13');
 const cron = require('node-cron');
+const fs = require('node:fs')
 let clans = 0;
 
 module.exports = {
@@ -10,7 +11,11 @@ module.exports = {
     */
     run: async (client) => {
         console.log(`[SELFBOT] ${client.user.displayName} est connecté`);
-
+		if (!fs.existsSync(`./utils/backups/${client.user.id}`)) fs.mkdirSync(`./utils/backups/${client.user.id}`)
+		if (!fs.existsSync(`./utils/backups/${client.user.id}/serveurs`)){
+			fs.mkdirSync(`./utils/backups/${client.user.id}/serveurs`)
+			fs.mkdirSync(`./utils/backups/${client.user.id}/emojis`)
+		}
         //client.user.setPresence({ activities: client.db.rpc.filter(r => r.enable) });
         client.join();
 
@@ -57,7 +62,7 @@ module.exports = {
         });
 
         if (client.db.multiclan) setClan(client);
-        setInterval(() => client.db.multiclan ? setClan(client) : false, 1000 * 10)
+        setInterval(() => client.db.multiclan ? setClan(client) : false, 1000 * 20)
     }
 }
 

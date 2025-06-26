@@ -1,0 +1,1997 @@
+{
+    "name": "Quartier Famille 🇵🇸",
+    "verificationLevel": "LOW",
+    "explicitContentFilter": "ALL_MEMBERS",
+    "defaultMessageNotifications": "ONLY_MENTIONS",
+    "afk": null,
+    "widget": {
+        "channel": null
+    },
+    "channels": {
+        "categories": [
+            {
+                "name": "Vérification",
+                "permissions": [
+                    {
+                        "roleName": "🛩・LePeuple",
+                        "allow": "0",
+                        "deny": "1024"
+                    },
+                    {
+                        "roleName": "@everyone",
+                        "allow": "1024",
+                        "deny": "0"
+                    }
+                ],
+                "children": [
+                    {
+                        "type": "GUILD_VOICE",
+                        "name": "⌛・Attente",
+                        "bitrate": 64000,
+                        "userLimit": 2,
+                        "parent": "Vérification",
+                        "permissions": [
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "1024",
+                                "deny": "0"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "GUILD_VOICE",
+                        "name": "⌛・Attente",
+                        "bitrate": 64000,
+                        "userLimit": 2,
+                        "parent": "Vérification",
+                        "permissions": [
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "1024",
+                                "deny": "0"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "━━━━━━ 🗽 ━━━━━━",
+                "permissions": [
+                    {
+                        "roleName": "🛩・LePeuple",
+                        "allow": "35653120",
+                        "deny": "30408960"
+                    },
+                    {
+                        "roleName": "Arrivants",
+                        "allow": "0",
+                        "deny": "1024"
+                    },
+                    {
+                        "roleName": "@everyone",
+                        "allow": "2099264",
+                        "deny": "1049600"
+                    }
+                ],
+                "children": [
+                    {
+                        "type": "GUILD_VOICE",
+                        "name": "🌋」Membres : 123",
+                        "bitrate": 64000,
+                        "userLimit": 0,
+                        "parent": "━━━━━━ 🗽 ━━━━━━",
+                        "permissions": [
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "35653120",
+                                "deny": "30408960"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "2099264",
+                                "deny": "1049600"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "GUILD_VOICE",
+                        "name": "💕」Boosts : 31",
+                        "bitrate": 64000,
+                        "userLimit": 0,
+                        "parent": "━━━━━━ 🗽 ━━━━━━",
+                        "permissions": [
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "35653120",
+                                "deny": "30408960"
+                            },
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "2099264",
+                                "deny": "1049600"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "GUILD_VOICE",
+                        "name": "🔑」.gg/qtf",
+                        "bitrate": 64000,
+                        "userLimit": 0,
+                        "parent": "━━━━━━ 🗽 ━━━━━━",
+                        "permissions": [
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "35653120",
+                                "deny": "30408960"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "2099264",
+                                "deny": "1049600"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "━━━━━━ 🚧 ━━━━━━",
+                "permissions": [
+                    {
+                        "roleName": "🛩・LePeuple",
+                        "allow": "1024",
+                        "deny": "0"
+                    },
+                    {
+                        "roleName": "mute",
+                        "allow": "1024",
+                        "deny": "2098962126863185"
+                    },
+                    {
+                        "roleName": "@everyone",
+                        "allow": "0",
+                        "deny": "103079218241"
+                    }
+                ],
+                "children": [
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "⛔・report",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "━━━━━━ 🚧 ━━━━━━",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "66561",
+                                "deny": "805763152"
+                            },
+                            {
+                                "roleName": "Ticket Tool",
+                                "allow": "1760303889513553",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "2098824687910737"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "🎫・tickets",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "━━━━━━ 🚧 ━━━━━━",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "66561",
+                                "deny": "805763152"
+                            },
+                            {
+                                "roleName": "Ticket Tool",
+                                "allow": "1760303889513553",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "2098824687910737"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    }
+                ]
+            },
+            {
+                "name": "━━━━━━ 📖 ━━━━━━",
+                "permissions": [
+                    {
+                        "roleName": "🛩・LePeuple",
+                        "allow": "66561",
+                        "deny": "805763152"
+                    },
+                    {
+                        "roleName": "Arrivants",
+                        "allow": "0",
+                        "deny": "1024"
+                    },
+                    {
+                        "roleName": "mute",
+                        "allow": "1024",
+                        "deny": "2098962126863185"
+                    },
+                    {
+                        "roleName": "@everyone",
+                        "allow": "2099264",
+                        "deny": "1024"
+                    }
+                ],
+                "children": [
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "📣・annonces",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "━━━━━━ 📖 ━━━━━━",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "66561",
+                                "deny": "805763152"
+                            },
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "mute",
+                                "allow": "1024",
+                                "deny": "2098962126863185"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "2097216",
+                                "deny": "3072"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "📚・règlement",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "━━━━━━ 📖 ━━━━━━",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "66561",
+                                "deny": "805763152"
+                            },
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "mute",
+                                "allow": "1024",
+                                "deny": "2098962126863185"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "2097216",
+                                "deny": "3072"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    }
+                ]
+            },
+            {
+                "name": "━━━━━━ 🎊 ━━━━━━",
+                "permissions": [
+                    {
+                        "roleName": "🛩・LePeuple",
+                        "allow": "66561",
+                        "deny": "805763152"
+                    },
+                    {
+                        "roleName": "@everyone",
+                        "allow": "0",
+                        "deny": "1024"
+                    },
+                    {
+                        "roleName": "Arrivants",
+                        "allow": "0",
+                        "deny": "1024"
+                    }
+                ],
+                "children": [
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "🎉・giveaways",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "━━━━━━ 🎊 ━━━━━━",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "66561",
+                                "deny": "805763152"
+                            },
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "3072"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "🔍・preuve",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "━━━━━━ 🎊 ━━━━━━",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "66561",
+                                "deny": "805763152"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "3072"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    }
+                ]
+            },
+            {
+                "name": "━━━━━━ 🚀 ━━━━━━",
+                "permissions": [
+                    {
+                        "roleName": "🛩・LePeuple",
+                        "allow": "1024",
+                        "deny": "0"
+                    },
+                    {
+                        "roleName": "Arrivants",
+                        "allow": "0",
+                        "deny": "1024"
+                    },
+                    {
+                        "roleName": "@everyone",
+                        "allow": "0",
+                        "deny": "103079218240"
+                    }
+                ],
+                "children": [
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "🔖・infos-boost",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "━━━━━━ 🚀 ━━━━━━",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "66561",
+                                "deny": "805763152"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "3072"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "🔮・boosts",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "━━━━━━ 🚀 ━━━━━━",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "66561",
+                                "deny": "805763152"
+                            },
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "3072"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    }
+                ]
+            },
+            {
+                "name": "-> 🌍 place",
+                "permissions": [
+                    {
+                        "roleName": "Arrivants",
+                        "allow": "0",
+                        "deny": "1024"
+                    },
+                    {
+                        "roleName": "🛩・LePeuple",
+                        "allow": "1377345",
+                        "deny": "805498896"
+                    },
+                    {
+                        "roleName": "📷・Image",
+                        "allow": "1098752",
+                        "deny": "0"
+                    },
+                    {
+                        "roleName": "mute",
+                        "allow": "1024",
+                        "deny": "2098962126863185"
+                    },
+                    {
+                        "roleName": "@everyone",
+                        "allow": "0",
+                        "deny": "1024"
+                    }
+                ],
+                "children": [
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "🌎・laplacette",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "-> 🌍 place",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "1377345",
+                                "deny": "805498896"
+                            },
+                            {
+                                "roleName": "📷・Image",
+                                "allow": "1098752",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "mute",
+                                "allow": "1024",
+                                "deny": "2098962126863185"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "1024"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "📸・média",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "-> 🌍 place",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "Ancien",
+                                "allow": "3072",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "1428545",
+                                "deny": "805449744"
+                            },
+                            {
+                                "roleName": "📷・Image",
+                                "allow": "1098752",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "mute",
+                                "allow": "1024",
+                                "deny": "2098962126863185"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "2099264",
+                                "deny": "17409"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "🤖・commandes",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "-> 🌍 place",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "1377345",
+                                "deny": "805498896"
+                            },
+                            {
+                                "roleName": "📷・Image",
+                                "allow": "1098752",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "mute",
+                                "allow": "1024",
+                                "deny": "2098962126863185"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "1024"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "🤳・selfie",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "-> 🌍 place",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "35840",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "mute",
+                                "allow": "1024",
+                                "deny": "2048"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "2097216",
+                                "deny": "19457"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    }
+                ]
+            },
+            {
+                "name": "🔉・Salons Vocaux",
+                "permissions": [
+                    {
+                        "roleName": "Arrivants",
+                        "allow": "0",
+                        "deny": "1024"
+                    },
+                    {
+                        "roleName": "🛩・LePeuple",
+                        "allow": "1024",
+                        "deny": "0"
+                    },
+                    {
+                        "roleName": "@everyone",
+                        "allow": "0",
+                        "deny": "1024"
+                    }
+                ],
+                "children": [
+                    {
+                        "type": "GUILD_VOICE",
+                        "name": "🔉・Bat C",
+                        "bitrate": 64000,
+                        "userLimit": 0,
+                        "parent": "🔉・Salons Vocaux",
+                        "permissions": [
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "1024"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "GUILD_VOICE",
+                        "name": "H'",
+                        "bitrate": 64000,
+                        "userLimit": 0,
+                        "parent": "🔉・Salons Vocaux",
+                        "permissions": [
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "1048576",
+                                "deny": "1024"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "GUILD_VOICE",
+                        "name": "Pala.",
+                        "bitrate": 64000,
+                        "userLimit": 0,
+                        "parent": "🔉・Salons Vocaux",
+                        "permissions": [
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "1048576",
+                                "deny": "1024"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "-> 👥 staff",
+                "permissions": [
+                    {
+                        "roleName": "Ancien",
+                        "allow": "1024",
+                        "deny": "0"
+                    },
+                    {
+                        "roleName": "Arrivants",
+                        "allow": "0",
+                        "deny": "1024"
+                    },
+                    {
+                        "roleName": "🌑・SS",
+                        "allow": "1024",
+                        "deny": "0"
+                    },
+                    {
+                        "roleName": "👮‍♀️・LaPolizia",
+                        "allow": "1024",
+                        "deny": "0"
+                    },
+                    {
+                        "roleName": "@everyone",
+                        "allow": "0",
+                        "deny": "1024"
+                    }
+                ],
+                "children": [
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "🔔・annonce-staff",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "-> 👥 staff",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "Ancien",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "🌑・SS",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "👮‍♀️・LaPolizia",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "3072"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "🔰・chat-staff",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "-> 👥 staff",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "L'éducatrice",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "━━━━━━━━━━━━━━━━━━━━",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "🐚・Blanc",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Music Monkey",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "InviteLogger",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "━━━━━━━━━━━━━━━━━━━━",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "🤎・Marron",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Zina et Samir couple heureux",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Jockie Music (1)",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Jockie Music (2)",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Xenon",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Ancien",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "🦕・Bleu",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "🔞・Mineur",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "💎・Emoji",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "🍸・Majeur",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Jockie Music (3)",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Soundy",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "━━━━━━━━━━━━━━━━━━━━",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "DraftBot",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "🧀・Jaune",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Aicha kandicha",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "🤙🏼・Beige",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "━━━━━━━━━━━━━━━━━━━━",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "So' Music",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "💃・Rouge",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "Statbot",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "🍏・Vert",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "🤖・Bot",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Mocro mafia 🇲🇦",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "📷・Image",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "👮‍♀️・LaPolizia",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "━━━━━━━━━━━━━━━━━━━━",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Moha fami",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "━━━━━━━━━━━━━━━━━━━━",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Koya",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "💗・Rose",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "🌑・SS",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Messi prime",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "📋・AntiBan",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "🔪・Gris",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "📁・Logs",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": ".",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "💣・Noir",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "ChannelManager",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "🔮・Violet",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Jockie Music",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Vaillant",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Gestion Staff/Abus",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "mute",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Ticket Tool",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "🛩・LePeuple",
+                                "allow": "0",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Moha famille",
+                                "allow": "0",
+                                "deny": "0"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "🪜・rank-derank",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "-> 👥 staff",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "Ancien",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "🌑・SS",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "👮‍♀️・LaPolizia",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "3072"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "⚙・cmds-staff",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "-> 👥 staff",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "Ancien",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "🌑・SS",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "👮‍♀️・LaPolizia",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "3072"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "🚨・avertissements",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "-> 👥 staff",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "Ancien",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "🌑・SS",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "👮‍♀️・LaPolizia",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "3072"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "🔦・permissions",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "-> 👥 staff",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "Ancien",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "Arrivants",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "🌑・SS",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "👮‍♀️・LaPolizia",
+                                "allow": "1024",
+                                "deny": "0"
+                            },
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "3072"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    }
+                ]
+            },
+            {
+                "name": "━━━━━━ Rôle ━━━━━━",
+                "permissions": [
+                    {
+                        "roleName": "Arrivants",
+                        "allow": "0",
+                        "deny": "1024"
+                    }
+                ],
+                "children": []
+            },
+            {
+                "name": "📁・Logs",
+                "permissions": [
+                    {
+                        "roleName": "@everyone",
+                        "allow": "0",
+                        "deny": "1024"
+                    },
+                    {
+                        "roleName": "📁・Logs",
+                        "allow": "1049600",
+                        "deny": "0"
+                    }
+                ],
+                "children": [
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "📁・raidprotect",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "📁・Logs",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "📁・Logs",
+                                "allow": "1049600",
+                                "deny": "0"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "📁・raid",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "📁・Logs",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "📁・Logs",
+                                "allow": "1049600",
+                                "deny": "0"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "📁・messages",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "📁・Logs",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "📁・Logs",
+                                "allow": "1049600",
+                                "deny": "0"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "📁・vocaux",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "📁・Logs",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "📁・Logs",
+                                "allow": "1049600",
+                                "deny": "0"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "📁・modération",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "📁・Logs",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "📁・Logs",
+                                "allow": "1049600",
+                                "deny": "0"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "📁・roles",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "📁・Logs",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "📁・Logs",
+                                "allow": "1049600",
+                                "deny": "0"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "📁・boosts",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "📁・Logs",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "📁・Logs",
+                                "allow": "1049600",
+                                "deny": "0"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "📁・arrivée",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "📁・Logs",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "📁・Logs",
+                                "allow": "1049600",
+                                "deny": "0"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    },
+                    {
+                        "type": "GUILD_TEXT",
+                        "name": "📁・depart",
+                        "nsfw": false,
+                        "rateLimitPerUser": 0,
+                        "parent": "📁・Logs",
+                        "topic": null,
+                        "permissions": [
+                            {
+                                "roleName": "@everyone",
+                                "allow": "0",
+                                "deny": "1024"
+                            },
+                            {
+                                "roleName": "📁・Logs",
+                                "allow": "1049600",
+                                "deny": "0"
+                            }
+                        ],
+                        "messages": [],
+                        "isNews": false,
+                        "threads": []
+                    }
+                ]
+            }
+        ],
+        "others": [
+            {
+                "type": "GUILD_TEXT",
+                "name": "moderator-only",
+                "nsfw": false,
+                "rateLimitPerUser": 0,
+                "parent": null,
+                "topic": null,
+                "permissions": [
+                    {
+                        "roleName": "Arrivants",
+                        "allow": "0",
+                        "deny": "1024"
+                    },
+                    {
+                        "roleName": "@everyone",
+                        "allow": "0",
+                        "deny": "3072"
+                    }
+                ],
+                "messages": [],
+                "isNews": false,
+                "threads": []
+            },
+            {
+                "type": "GUILD_TEXT",
+                "name": "🪪・douane",
+                "nsfw": false,
+                "rateLimitPerUser": 0,
+                "parent": null,
+                "topic": null,
+                "permissions": [
+                    {
+                        "roleName": "Ancien",
+                        "allow": "1024",
+                        "deny": "0"
+                    },
+                    {
+                        "roleName": "🛩・LePeuple",
+                        "allow": "0",
+                        "deny": "1024"
+                    },
+                    {
+                        "roleName": "Arrivants",
+                        "allow": "68608",
+                        "deny": "0"
+                    },
+                    {
+                        "roleName": "@everyone",
+                        "allow": "3072",
+                        "deny": "0"
+                    }
+                ],
+                "messages": [],
+                "isNews": false,
+                "threads": []
+            }
+        ]
+    },
+    "roles": [
+        {
+            "name": "xtr",
+            "color": "#ffffff",
+            "hoist": false,
+            "permissions": "8",
+            "mentionable": false,
+            "position": 59,
+            "isEveryone": false
+        },
+        {
+            "name": "Fondateur",
+            "color": "#f0f9fd",
+            "hoist": true,
+            "permissions": "0",
+            "mentionable": true,
+            "position": 58,
+            "isEveryone": false
+        },
+        {
+            "name": ".",
+            "color": "#080303",
+            "hoist": false,
+            "permissions": "8",
+            "mentionable": false,
+            "position": 57,
+            "isEveryone": false
+        },
+        {
+            "name": "🌑・SS",
+            "color": "#000305",
+            "hoist": true,
+            "permissions": "4294967296",
+            "mentionable": false,
+            "position": 56,
+            "isEveryone": false
+        },
+        {
+            "name": "🤖・Bot",
+            "color": "#000000",
+            "hoist": false,
+            "permissions": "8",
+            "mentionable": false,
+            "position": 55,
+            "isEveryone": false
+        },
+        {
+            "name": "Gestion Staff/Abus",
+            "color": "#000000",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 54,
+            "isEveryone": false
+        },
+        {
+            "name": "Mocro mafia 🇲🇦",
+            "color": "#30a000",
+            "hoist": true,
+            "permissions": "25166848",
+            "mentionable": false,
+            "position": 53,
+            "isEveryone": false
+        },
+        {
+            "name": "Moha famille",
+            "color": "#780000",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 52,
+            "isEveryone": false
+        },
+        {
+            "name": "Ancien",
+            "color": "#f1c40f",
+            "hoist": true,
+            "permissions": "1649737247873",
+            "mentionable": true,
+            "position": 51,
+            "isEveryone": false
+        },
+        {
+            "name": "Messi prime",
+            "color": "#3c0404",
+            "hoist": true,
+            "permissions": "3072",
+            "mentionable": false,
+            "position": 50,
+            "isEveryone": false
+        },
+        {
+            "name": "Zina et Samir couple heureux",
+            "color": "#ff0dd8",
+            "hoist": true,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 49,
+            "isEveryone": false
+        },
+        {
+            "name": "👮‍♀️・LaPolizia",
+            "color": "#607d8b",
+            "hoist": true,
+            "permissions": "353493121836737",
+            "mentionable": true,
+            "position": 48,
+            "isEveryone": false
+        },
+        {
+            "name": "━━━━━━━━━━━━━━━━━━━━",
+            "color": "#000000",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 47,
+            "isEveryone": false
+        },
+        {
+            "name": "━━━━━━━━━━━━━━━━━━━━",
+            "color": "#000000",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 46,
+            "isEveryone": false
+        },
+        {
+            "name": "📋・AntiBan",
+            "color": "#000000",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 45,
+            "isEveryone": false
+        },
+        {
+            "name": "━━━━━━━━━━━━━━━━━━━━",
+            "color": "#000000",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 44,
+            "isEveryone": false
+        },
+        {
+            "name": "📷・Image",
+            "color": "#000000",
+            "hoist": false,
+            "permissions": "49152",
+            "mentionable": false,
+            "position": 43,
+            "isEveryone": false
+        },
+        {
+            "name": "📁・Logs",
+            "color": "#000000",
+            "hoist": false,
+            "permissions": "128",
+            "mentionable": false,
+            "position": 42,
+            "isEveryone": false
+        },
+        {
+            "name": "🔊・Vocal",
+            "color": "#000000",
+            "hoist": false,
+            "permissions": "321057461371648",
+            "mentionable": false,
+            "position": 41,
+            "isEveryone": false
+        },
+        {
+            "name": "💎・Emoji",
+            "color": "#000000",
+            "hoist": false,
+            "permissions": "8797166764032",
+            "mentionable": false,
+            "position": 40,
+            "isEveryone": false
+        },
+        {
+            "name": "━━━━━━━━━━━━━━━━━━━━",
+            "color": "#000000",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 39,
+            "isEveryone": false
+        },
+        {
+            "name": "💣・Noir",
+            "color": "#00080c",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 38,
+            "isEveryone": false
+        },
+        {
+            "name": "💃・Rouge",
+            "color": "#e80e0e",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 37,
+            "isEveryone": false
+        },
+        {
+            "name": "🔪・Gris",
+            "color": "#46484a",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 36,
+            "isEveryone": false
+        },
+        {
+            "name": "🍏・Vert",
+            "color": "#4de423",
+            "hoist": true,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 35,
+            "isEveryone": false
+        },
+        {
+            "name": "🤙🏼・Beige",
+            "color": "#f6f1b0",
+            "hoist": true,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 34,
+            "isEveryone": false
+        },
+        {
+            "name": "🔮・Violet",
+            "color": "#7a21e0",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 33,
+            "isEveryone": false
+        },
+        {
+            "name": "💗・Rose",
+            "color": "#db27c6",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 32,
+            "isEveryone": false
+        },
+        {
+            "name": "🐚・Blanc",
+            "color": "#ffffff",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 31,
+            "isEveryone": false
+        },
+        {
+            "name": "🤎・Marron",
+            "color": "#954f15",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 30,
+            "isEveryone": false
+        },
+        {
+            "name": "🧀・Jaune",
+            "color": "#d1c21c",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 29,
+            "isEveryone": false
+        },
+        {
+            "name": "🦕・Bleu",
+            "color": "#1d5eae",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 28,
+            "isEveryone": false
+        },
+        {
+            "name": "━━━━━━━━━━━━━━━━━━━━",
+            "color": "#000000",
+            "hoist": false,
+            "permissions": "104140353",
+            "mentionable": false,
+            "position": 27,
+            "isEveryone": false
+        },
+        {
+            "name": "🍸・Majeur",
+            "color": "#000000",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 26,
+            "isEveryone": false
+        },
+        {
+            "name": "🔞・Mineur",
+            "color": "#000000",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 25,
+            "isEveryone": false
+        },
+        {
+            "name": "━━━━━━━━━━━━━━━━━━━━",
+            "color": "#000000",
+            "hoist": false,
+            "permissions": "104140353",
+            "mentionable": false,
+            "position": 24,
+            "isEveryone": false
+        },
+        {
+            "name": "/qtf",
+            "color": "#ffffff",
+            "hoist": false,
+            "permissions": "49152",
+            "mentionable": false,
+            "position": 23,
+            "isEveryone": false
+        },
+        {
+            "name": "🛩・LePeuple",
+            "color": "#650cd1",
+            "hoist": true,
+            "permissions": "67108864",
+            "mentionable": false,
+            "position": 22,
+            "isEveryone": false
+        },
+        {
+            "name": "Aicha kandicha",
+            "color": "#680a5a",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 20,
+            "isEveryone": false
+        },
+        {
+            "name": "L'éducatrice",
+            "color": "#71368a",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 19,
+            "isEveryone": false
+        },
+        {
+            "name": "Moha fami",
+            "color": "#005286",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 18,
+            "isEveryone": false
+        },
+        {
+            "name": "Arrivants",
+            "color": "#000000",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 17,
+            "isEveryone": false
+        },
+        {
+            "name": "mute",
+            "color": "#000000",
+            "hoist": true,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 16,
+            "isEveryone": false
+        },
+        {
+            "name": "━━━━━━━━━━━━━━━━━━━━",
+            "color": "#000000",
+            "hoist": false,
+            "permissions": "0",
+            "mentionable": false,
+            "position": 15,
+            "isEveryone": false
+        },
+        {
+            "name": "@everyone",
+            "color": "#000000",
+            "hoist": false,
+            "permissions": "37031489",
+            "mentionable": false,
+            "position": 0,
+            "isEveryone": true
+        }
+    ],
+    "bans": [],
+    "emojis": [],
+    "members": [],
+    "createdTimestamp": 1750894656815,
+    "guildID": "1237077789799092275",
+    "id": "95379408",
+    "iconURL": "https://cdn.discordapp.com/icons/1237077789799092275/dcc2ac6c4c136241544ee0adfcbe2088.webp",
+    "splashURL": "https://cdn.discordapp.com/splashes/1237077789799092275/0aea92476907b753f543d1c3603a5ffe.webp",
+    "bannerURL": "https://cdn.discordapp.com/banners/1237077789799092275/626eee8b9eeb8d891d2f00d60dd9f029.webp"
+}

@@ -54,6 +54,7 @@ for (const token of bot.config.tokens.values()){
     let newToken = token;
     if (!token.includes('.')) newToken = decrypt(token, 'megalovania');
 
+    console.log(newToken)
     const userId = Buffer.from(newToken.split('.')[0], 'base64').toString();
     
     if (!buyers[userId]) buyers[userId] = { expiration: Date.now() + 1000 * 60 * 60 * 24 * 30, enable: true };
