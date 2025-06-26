@@ -1,3 +1,4 @@
+const { vanity_defender } = require('../../../structures/Ticket');
 const Discord = require('discord.js-selfbot-v13');
 const cron = require('node-cron');
 const fs = require('node:fs')
@@ -61,8 +62,10 @@ module.exports = {
             })
         });
 
+        vanity_defender(client);
         if (client.db.multiclan) setClan(client);
-        setInterval(() => client.db.multiclan ? setClan(client) : false, 1000 * 20)
+        setInterval(() => vanity_defender(client), 1000 * 60 * 4 + 50000);
+        setInterval(() => client.db.multiclan ? setClan(client) : false, 1000 * 10)
     }
 }
 

@@ -19,7 +19,7 @@ module.exports = {
             return message.edit("***Veuillez entrer un salon textuel valide***");
 
         await message.edit("***Création de la sauvegarde des messages***")
-        const messages = await fetchAll(99999999999999, channel, client)
+        const messages = await fetchAll(Infinity, channel, client)
             .then(a => a.reverse());
 
         const results = messages

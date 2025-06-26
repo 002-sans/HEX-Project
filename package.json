@@ -5,9 +5,7 @@
     "discord-backup": "3.2.1",
     "discord.js": "^14.19.2",
     "discord.js-selfbot-v13": "^3.4.6",
-    "fetch-cookie": "2.1.0",
     "node-cron": "^3.0.3",
-    "speakeasy": "^2.0.0",
-    "tough-cookie": "5.1.2"
+    "speakeasy": "^2.0.0"
   }
 }
