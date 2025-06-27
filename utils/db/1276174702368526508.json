@@ -40,6 +40,11 @@
         "status": false
     },
     "setgame": {
+        "name": "Grand Theft Auto V",
+        "type": 0,
+        "assets": {
+            "large_image": "mp:external/YowiPFgQADlpMTeguEAHFn06B3rw2byZDmgvEQjmBFk/https/i.postimg.cc/90ZN7p8Y/GTAV.webp"
+        },
         "status": false
     },
     "spotify": {

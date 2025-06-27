@@ -76,14 +76,14 @@ module.exports = {
             case args[0] == "on":
                 client.db.setgame.status = true;
                 client.save();
-
+                client.multiRPC();
                 message.edit("***Le rpc a été activé***");
                 break;
 
             case args[0] == "off":
                 client.db.setgame.status = false;
                 client.save();
-
+                client.multiRPC();
                 message.edit("***Le rpc a été désactivé***");
                 break;
         }
