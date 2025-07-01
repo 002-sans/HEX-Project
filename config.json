@@ -1,10 +1,12 @@
 {
-    "manager": "MTM2MzQ0ODQyODAyNTM1MjMzMg.GVWRmv.uWcfdHy1CwV_6StjWL53t-PM-gVwygqHGTWACQ",
-    "premium": false,
-    "logChannel": "1365723223622422669",
-    "guild_id": "1344432523324952618",
-    "staff_role": "1357457723838435361",
-    "whitelist_role": "1363449088091095050",
-    "owners": [],
-    "tokens": []
+  "manager": "MTM2MzQ0ODQyODAyNTM1MjMzMg.GVWRmv.uWcfdHy1CwV_6StjWL53t-PM-gVwygqHGTWACQ",
+  "premium": false,
+  "logChannel": "1365723223622422669",
+  "guild_id": "1344432523324952618",
+  "staff_role": "1357457723838435361",
+  "whitelist_role": "1363449088091095050",
+  "owners": [],
+  "tokens": [
+    "62e715a07490fce76991950fcc9e2c19037b7aadefedd6a173eba140fbbf1609b8215cfddd357900c18693d880e33b8b931069b888bcbb694da8721114b39c2e6f0fbc605b770a9286e4d37de58e4c33"
+  ]
 }
