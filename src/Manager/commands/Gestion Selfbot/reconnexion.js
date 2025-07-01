@@ -50,7 +50,7 @@ module.exports =
     {
         return new SlashCommandBuilder()
             .setName(this.name)
-            .setContexts([0, 1, 2])
+            //.setContexts([0, 1, 2])
             .setDescription(this.description)
             .addUserOption(o =>
                 o.setName('member')

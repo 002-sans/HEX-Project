@@ -8,6 +8,7 @@ module.exports = {
     usage: "<backupID>",
     permission: "ADMINISTRATOR",
     dir: "backups",
+    premium: true,
     /**
      * @param {Client} client
      * @param {Message} message
@@ -20,7 +21,6 @@ module.exports = {
         const backupData = await backup.fetch(args[0]).catch(() => false);
 
         if (!backupData || !args[0]) return message.edit(`***Aucune backup de trouvée pour \`${args[0] ?? 'rien'}\`***`);
-        if (client.data['backup'] && !client.premium.actif) return message.edit(`***Vous pourrez utiliser cette commande <t:${client.data['backup']}:R>***`)
 
         client.data['backup'] = Date.now() + 1000 * 60 * 20;
         setTimeout(() => delete client.data['backup'], 1000 * 60 * 20);

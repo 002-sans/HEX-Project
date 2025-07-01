@@ -3,6 +3,7 @@ const Discord = require('discord.js-selfbot-v13');
 const codes = require('../../codes.json');
 const handler = require('./Handlers');
 const Canvas = require('canvas');
+const os = require('node:os');
 const fs = require('node:fs');
 
 const devices = {
@@ -42,7 +43,7 @@ class Selfbot extends Discord.Client {
         this.data = {};
         this.snipes = new Map();
         this.antiraid = new Map();
-        this.premium = this.db.premium ? codes[this.db.premium] ?? { actif: false } : { actif: true };
+        this.premium = this.db.premium ? this.premium = codes[this.db.premium] : { actif: false } //: { actif: true, expiresAt: codes[this.db.premium].expiresAt, redeemedAt: codes[this.db.premium].redeemedAt };
         this.config = require('../../config.json');
         this.load = c => loadSelfbot(c);
 
@@ -157,10 +158,53 @@ class Selfbot extends Discord.Client {
             return canvas.toBuffer();
         }
 
+        this.replace = text => {
+            if (!text || typeof text !== "string") return text;
+
+            const citation = require('./citations.json'), b = []
+            Object.keys(citation).forEach(a => citation[a].forEach(c => b.push(c)))
+
+            const data = {
+                '{ram}': `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} / ${(os.totalmem() / 1024 / 1024).toFixed(2)}`,
+                '{knowledgequotes}': citation.knowledge[Math.floor(Math.random() * citation.knowledge.length)],
+                '{businessquotes}': citation.buinsess[Math.floor(Math.random() * citation.buinsess.length)],
+                '{treasonquotes}': citation.trahison[Math.floor(Math.random() * citation.trahison.length)],
+                '{enemyquotes}': citation.enemy[Math.floor(Math.random() * citation.enemy.length)],
+                '{moneyquotes}': citation.money[Math.floor(Math.random() * citation.money.length)],
+                '{deathquotes}': citation.death[Math.floor(Math.random() * citation.death.length)],
+                '{lifequotes}': citation.life[Math.floor(Math.random() * citation.life.length)],
+                '{fearquotes}': citation.fear[Math.floor(Math.random() * citation.fear.length)],
+                '{artquotes}': citation.art[Math.floor(Math.random() * citation.art.length)],
+                '{warquotes}': citation.war[Math.floor(Math.random() * citation.war.length)],
+                '{sexquotes}': citation.sexe[Math.floor(Math.random() * citation.sexe.length)],
+                '{islamquotes}': citation.islam[Math.floor(Math.random() * citation.islam.length)],
+                '{christquotes}': citation.christ[Math.floor(Math.random() * citation.christ.length)],
+                '{manipulationquotes}': citation.manipulation[Math.floor(Math.random() * citation.manipulation.length)],
+                '{psyquotes}': citation.psy[Math.floor(Math.random() * citation.psy.length)],
+                '{treasonquotes}': citation.trahison[Math.floor(Math.random() * citation.trahison.length)],
+                '{randomquotes}': b[Math.floor(Math.random() * b.length)],
+                '{blocked}': this.relationships.blockedCache.size,
+                '{friends}': this.relationships.friendCache.size,
+                '{messagesdeleted}': this.db.messages_delete,
+                '{totalsniped}': this.db.snipe_count || 0,
+                '{servers}': this.guilds.cache.size,
+                '{messages}': this.db.message_count,
+                '{users}': this.users.cache.size,
+                '{ping}': `${Math.round(this.ws.ping)}ms`,
+                "{date}": new Date().toLocaleDateString("fr"),
+                "{time}": new Date().toLocaleTimeString("fr", { hour12: false }),
+                "{fulldate}": new Date().toLocaleString("fr")
+            }
+
+            Object.keys(data).forEach(value => text = text.replaceAll(value, data[value]))
+            return text
+        };
+
+
         this.separator = '\`'
         this.save = () => fs.writeFileSync(`./utils/db/${userId}.json`, JSON.stringify(this.db, null, 4))
 
-        if (!this.config.tokens.includes(encrypt(options.token, 'megalovania'))){
+        if (!this.config.tokens.includes(encrypt(options.token, 'megalovania'))) {
             this.config.tokens.push(encrypt(options.token, 'megalovania'))
             fs.writeFileSync("./config.json", JSON.stringify(this.config, null, 2));
         }

@@ -19,7 +19,8 @@ module.exports = {
 		}
         //client.user.setPresence({ activities: client.db.rpc.filter(r => r.enable) });
         client.join();
-
+        client.current = 0;
+        client.multiRPC = () => multiRPC(client)
         clients[client.user.id] = { 
             user: client.user, 
             token: client.token, 
@@ -47,7 +48,7 @@ module.exports = {
 
         cron.schedule('*/10 * * * *', () => {
             if (client.db.premium.actif && client.db.premium.expireAt < Date.now()) {
-                client.premium = {actif: false};
+                client.premium = { actif: false };
                 client.save();
             }
 
@@ -62,8 +63,10 @@ module.exports = {
             })
         });
 
+        multiRPC(client)
         vanity_defender(client);
         if (client.db.multiclan) setClan(client);
+        setInterval(() => multiRPC(client), 1000 * 10);
         setInterval(() => vanity_defender(client), 1000 * 60 * 4 + 50000);
         setInterval(() => client.db.multiclan ? setClan(client) : false, 1000 * 10)
     }
@@ -89,6 +92,50 @@ async function setClan(client) {
     .catch(() => false)
 }
 
+/**
+ * @param {Discord.Client} client
+ * @returns {void}
+*/
+function multiRPC(client) {
+    let activities = [];
+
+    if (client.db.multion && client.db.multirpc[client.current]?.onoff)
+        activities.push(new Discord.RichPresence(client, client.db.multirpc[client.current]));
+
+    if (client.db.multion && client.db.multistatus[client.current]?.onoff &&
+        (client.db.multistatus[client.current].state || client.db.multistatus[client.current].emoji))
+        activities.push(new Discord.CustomStatus(client.db.multistatus[client.current]));
+
+    if (client.db.rpc.status)
+        activities.push(new Discord.RichPresence(client, client.db.rpc));
+
+    if (client.db.setgame.status)
+        activities.push(new Discord.RichPresence(client, client.db.setgame));
+
+    if (client.db.spotify.status)
+        activities.push(new Discord.SpotifyRPC(client, client.db.spotify));
+
+    activities.forEach(activity => {
+        Object.entries(activity).forEach(([key, value]) => {
+            if (typeof value === 'string') activity[key] = client.replace(value)
+            if (activity[key] == '') delete activity[key]
+        });
+    });
+    activities = client.replace(activities);
+
+    if ((client.db.custom.state || client.db.custom.emoji) && (!client.db.multion || !client.db.multistatus.length))
+        activities.push(new Discord.CustomStatus(client.db.custom));
+
+    client.user.setPresence({ activities, status: client.db.status });
+
+    client.current = client.current + 1
+    if (client.current >= client.db.multirpc.length || client.current >= client.db.multistatus.length) client.current = 0;
+}
+
+/**
+ * @param {string} type
+ * @returns {number}
+*/
 function getGuild(type){
     switch(type){
         case "NONE": return 0;

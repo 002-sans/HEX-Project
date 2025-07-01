@@ -9,7 +9,7 @@
     "type": "sans",
     "image": null,
     "nsfw": false,
-    "premium": false,
+    "premium": "sans",
     "status": "idle",
     "antipub": false,
     "antibotdm": false,
@@ -27,10 +27,30 @@
         "wl": []
     },
     "rpc": {
-        "status": true,
-        "name": "❄",
-        "type": 5
+        "name": "Code",
+        "type": 0,
+        "details": "No Workspace - 0 problems found",
+        "state": "Working on HEX.js - 13:37",
+        "assets": {
+            "large_image": "mp:external/TYmZpqSy14Pd-zjpgTaxFC5t8JgsbV2SEqOFLoZH6gg/https/i.postimg.cc/Y23PMGwZ/js.png",
+            "small_image": "mp:external/aH-YX-4uAscoOjdRerxs7WZPodpnb_0n4PfzsrGzPeo/https/i.postimg.cc/L8yS6q3T/t-l-chargesdsfdment-removebg-preview.png",
+            "small_text": "Visual Studio Code",
+            "large_text": "Editing a JS file"
+        },
+        "status": false
     },
+    "setgame": {
+        "name": "Grand Theft Auto V",
+        "type": 0,
+        "assets": {
+            "large_image": "mp:external/YowiPFgQADlpMTeguEAHFn06B3rw2byZDmgvEQjmBFk/https/i.postimg.cc/90ZN7p8Y/GTAV.webp"
+        },
+        "status": false
+    },
+    "spotify": {
+        "status": false
+    },
+    "custom": {},
     "antiraid": {
         "antispam": {
             "etat": true,
@@ -129,6 +149,7 @@
     "tempvoc": [],
     "soutien": [],
     "piconly": [],
+    "multirpc": [],
     "autorole": [],
     "autoreact": [],
     "bl": []

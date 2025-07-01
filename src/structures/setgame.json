@@ -1,0 +1,128 @@
+{
+    "clear": {
+        "name": "ㅤ",
+        "type": 0
+    },
+    "gtav": {
+        "name": "Grand Theft Auto V",
+        "type": 0,
+        "platform": "ps5",
+        "assets": {
+            "large_image": "mp:external/YowiPFgQADlpMTeguEAHFn06B3rw2byZDmgvEQjmBFk/https/i.postimg.cc/90ZN7p8Y/GTAV.webp"
+        }
+    },
+    "gtavi": {
+        "name": "Grand Theft Auto VI",
+        "type": 0,
+        "platform": "ps5",
+        "assets": {
+            "large_image": "mp:external/scCdarf69TvLXYvwXOuboGdyXA8evrjlBZvvL_k5Vvo/https/i.postimg.cc/c4f1nLBP/Watch-Trailer-1-Tuesday-December-5-at-9-AM-ET-1-24-screenshot.webp"
+        }
+    },
+    "cs2": {
+        "name": "Counter-Strike 2",
+        "type": 0,
+        "platform": "ps5",
+        "assets": {
+            "large_image": "mp:external/hfhF6MVbodJA2525pbK-yqt4w_Bw4Ds5szujew4CIMA/https/i.postimg.cc/76jCLg0h/cs2.png"
+        }
+    },
+    "acs" : {
+        "name": "Assassin's Creed® Shadows",
+        "type": 0,
+        "platform": "ps5",
+        "assets": {
+            "large_image": "mp:external/bgLdb6kMcQ8SrhGFvoatKwBPzYJ6iQQOCb-yFW7ohAc/https/i.postimg.cc/T3HQy4hs/ACS.jpg"
+        }
+    },
+    "minecraft": {
+        "name": "Minecraft",
+        "type": 0,
+        "platform": "ps5",
+        "assets": {
+            "large_image": "mp:external/MfUwvXe85NA-znbdw6K8xq3mBfV5I1HhL1X54Eoea5o/https/i.postimg.cc/g2bsbZbM/Minecraft.png"
+        }
+    },
+    "resident": {
+        "name": "Resident Evil Village",
+        "type": 0,
+        "platform": "ps5",
+        "assets": {
+            "large_image": "mp:external/XnglBUagV8GZBpuetCxatfCevkK6MrJiVIigXfjX6j0/https/i.postimg.cc/NMdCgfkK/resident.jpg"
+        }
+    },
+    "apex": {
+        "name": "Apex Legends",
+        "type": 0,
+        "platform": "ps5",
+        "assets": {
+            "large_image": "mp:external/JvCoFkpVeXIxtQ45E9F31J6BQIp9FhXXvUtJDU3KwOY/https/i.postimg.cc/V6fg5gqt/apex.png"
+        }
+    },
+    "rocketleague": {
+        "name": "Rocket League",
+        "type": 0,
+        "platform": "ps5",
+        "assets": {
+            "large_image": "mp:external/bP0y5IfL0GbZ3Hi-gvOsKrHP5N_Mg3k5FfwcF899HtM/https/i.postimg.cc/KjVcz12w/t-l-chargement-removebg-preview.png"
+        }
+    },
+    "fallguys": {
+        "name": "Fall Guys",
+        "type": 0,
+        "platform": "ps5",
+        "assets": {
+            "large_image": "mp:external/cjjhriZGgpLXsSwoJ4owONnIfq6J9Qa1dlee63UPuF4/https/i.postimg.cc/fLCpJvDT/fallguys.png"
+        }
+    },
+    "valorant": {
+        "name": "VALORANT",
+        "type": 0,
+        "platform": "ps5",
+        "assets": {
+            "large_image": "mp:external/OeWe3kBKRpV1KuNzrFD3tUulvAJxyw-nIJPB030o6x0/https/i.postimg.cc/x1Lt7dwv/valorant.png"
+        }
+    },
+    "destiny": {
+        "name": "Destiny 2",
+        "type": 0,
+        "platform": "ps5",
+        "assets": {
+            "large_image": "mp:external/1BbDIVhq9VuysRlARdlwA2CZfcZJB895LnXvkSfGZWQ/https/i.postimg.cc/Kv1ZC85g/destiny-2-bungie-video-game-destiny-removebg-preview.png"
+        }
+    },
+    "cod": {
+        "name": "Call of Duty®: MWIII",
+        "type": 0,
+        "platform": "ps5",
+        "assets": {
+            "large_image": "mp:external/cTCgl2vRvji68szF1qHgX8nkPI2YqTBN3GSmM92Lx7s/https/i.postimg.cc/KvhWy6jq/MW3.png",
+            "small_image": "mp:external/Gt4DdrGXr53tzOfv0RdJENXqQVoHcKI_BkZ_UXKv_Xc/https/i.postimg.cc/qMc5B1Ck/MW3-2.png"
+        }
+    },
+    "schedule": {
+        "name": "Schedule I",
+        "type": 0,
+        "platform": "desktop",
+        "assets": {
+            "large_image": "mp:external/r7VSmHD8Qdvezr9HOegrNJ3hXbSBELvvGHOUzwzrKvM/https/i.imgur.com/sNqFdjN.png"
+        }
+    },
+    "fortnite": {
+        "name": "Fortnite",
+        "type": 0,
+        "platform": "ps5",
+        "assets": {
+            "large_image": "mp:external/YEXjvLEznJJpPPD2bwUUcSY37YcfVhB3AX6Kn-hYkhA/https/i.postimg.cc/43HjTbpH/c1864b38910c209afd5bf6423b672022.webp",
+            "small_image": "mp:external/1YeBCeneuf-MeKTlaOicbQtLsSuSgtbIBc58ti-EjYo/https/i.postimg.cc/2ywfh2Mf/passe-de-combat.png"
+        }
+    },
+    "fifa24": {
+        "name": "EA SPORTS FC™ 24",
+        "type": 0,
+        "platform": "ps5",
+        "assets": {
+            "large_image": "mp:external/BWoMz8rJuxdx-kSo7MEMa8mFhO-22hhvULYa_4vxcWk/https/i.postimg.cc/xj3CvSwM/FC24.webp"
+        }
+    }
+}

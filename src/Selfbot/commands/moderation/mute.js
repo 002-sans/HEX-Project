@@ -17,8 +17,6 @@ module.exports = {
         
         switch(args[0]){
             case 'list':
-                if (!client.premium.actif) return message.edit("***Vous devez avoir le premium pour utiliser cette commande***");
-
                 await message.guild.members.fetch().catch(() => false)
                 const mutes = message.guild.members.cache.filter(m => m.isCommunicationDisabled());
                 if (mutes.size === 0) return message.edit("***Aucun membre n'est mute sur ce serveur***");

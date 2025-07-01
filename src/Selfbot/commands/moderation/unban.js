@@ -17,7 +17,6 @@ module.exports = {
         
         switch(args[0]){
             case 'all':
-                if (!client.premium.actif) return message.edit("***Vous devez avoir le premium pour utiliser cette commande***");
                 const bans = await message.guild.bans.fetch().catch(() => false);
                 if (!bans || bans.size == 0) return message.edit("***Il n'y a aucun membre banni sur ce serveur***");
 

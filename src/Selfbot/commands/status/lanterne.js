@@ -23,7 +23,7 @@ module.exports = {
 
         message.edit("***Votre activitée va être mise à jour automatiquement***")
         let i = 0
-        client.lant = setInterval(() => {
+        client.lanterne = setInterval(() => {
             if (i === status.length) i = 0
             client.user.setStatus(status[i]); i++
         }, 2000)
