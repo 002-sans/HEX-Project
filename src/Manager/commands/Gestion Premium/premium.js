@@ -48,7 +48,7 @@ module.exports =
 
                 const embed = {
                     title: 'Liste des clés premium',
-                    description: keys.map(key => `\`${key}\` - Expire <t:${Math.round((Date.now() + codes[key].expiresAt) / 1000)}:R> ${codes[key].used ? `- <@${codes[key].by}>` : ''}`).join('\n'),
+                    description: keys.map(key => `\`${key}\` - Expire <t:${Math.round(codes[key].expiresAt / 1000)}:R> ${codes[key].used ? `- <@${codes[key].by}>` : ''}`).join('\n'),
                     color: 0x000000,
                 }
 
