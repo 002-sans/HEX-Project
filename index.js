@@ -65,6 +65,8 @@ bot.ms = temps => {
     }
 }
 
+bot.save = () => fs.writeFileSync('./config.json', JSON.stringify(bot.config, null, 4));
+
 
 loadEvents(bot, "./src/Manager/events");
 loadCommands(bot, "./src/Manager/commands");
