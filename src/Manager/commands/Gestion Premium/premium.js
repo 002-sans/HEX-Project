@@ -1,4 +1,6 @@
 const { SlashCommandBuilder, Client, Message, ChatInputCommandInteraction } = require("discord.js");
+const codes = require('../../codes.json');
+const fs = require('node:fs');
 
 module.exports = 
 {
@@ -21,11 +23,25 @@ module.exports =
     */
     async executeSlash(client, interaction) 
     {
-        switch(interaction.options.getSubcommand()){
+        switch(interaction.options.getSubcommand())
+        {
             case 'create':
-                // Crée un code
-                // Ajoute l'expiration avec ms (function perso)
-                // Envoie à un utilisateur (si donner)
+                const keyName = interaction.options.getString('nom') ?? Math.floor(10000000 + Math.random() * 90000000);
+                const temps = interaction.options.getString('temps');
+                const user = interaction.options.getUser('utilisateur');
+                
+                if (isNaN(client.ms(temps))) return interaction.reply({ content: 'Veuillez entrer un temps valide', flags: 64 });
+                if (codes[keyName]) return interaction.reply({ content: 'Une clé avec ce nom existe déjà', flags: 64 });
+
+                codes[keyName] = { expiresAt: temps };
+                fs.writeFileSync('./codes.json', JSON.stringify(codes, null, 4));
+
+                if (user) user.send(`**\`🔑\`・Vous avez reçu une clé premium\n\`⏳\`・La clé expire <t:${Math.round((Date.now() + client.ms(temps)) / 1000)}:R> (\`${keyName}\`)**`)
+                    .then(() => interaction.reply({ content: `\`✅\`・La clé premium \`${keyName}\` (expire <t:${Math.round((Date.now() + client.ms(temps)) / 1000)}:R>) a été envoyé à ${user}`,  flags: 64 }))
+                    .catch(e => interaction.reply({ content: `\`❌\`・La clé premium n'a pas pu être envoyé à ${user}.\n\`🔑\`・La clé expire <t:${Math.round((Date.now() + client.ms(temps)) / 1000)}:R> (\`${keyName}\`)`, flags: 64 }))
+
+                else interaction.reply({ content: `\`✅\`・La clé premium \`${keyName}\` (expire <t:${Math.round((Date.now() + client.ms(temps)) / 1000)}:R>) a bien été crée`,  flags: 64 });
+                break;
         }
     },
     get data() 
@@ -51,6 +67,13 @@ module.exports =
                         { name: '1 an', value: '1y' },
                     ])
                     .setRequired(true)
+                )
+                .addStringOption(o => 
+                    o.setName('nom')
+                    .setDescription('Le nom customisé de la clé premium')
+                    .setMinLength(4)
+                    .setMaxLength(10)
+                    .setRequired(false)
                 )
                 .addUserOption(o =>
                     o.setName('utilisateur')
