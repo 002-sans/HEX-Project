@@ -41,6 +41,7 @@ Object.defineProperty(identifyProperties, 'browser', {
     configurable: true
 });
 
+bot.codes = require('./codes.json');
 bot.config = require('./config.json');
 bot.load = token => loadSelfbot(token);
 bot.login(bot.config.manager).catch(() => false);
@@ -66,7 +67,7 @@ bot.ms = temps => {
 }
 
 bot.save = () => fs.writeFileSync('./config.json', JSON.stringify(bot.config, null, 4));
-
+bot.saveCode = () => fs.writeFileSync('./codes.json', JSON.stringify(bot.codes, null, 4));
 
 loadEvents(bot, "./src/Manager/events");
 loadCommands(bot, "./src/Manager/commands");

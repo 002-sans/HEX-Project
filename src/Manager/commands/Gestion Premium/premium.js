@@ -34,7 +34,7 @@ module.exports =
                 if (codes[keyName]) return interaction.reply({ content: 'Une clé avec ce nom existe déjà', flags: 64 });
 
                 codes[keyName] = { expiresAt: temps };
-                fs.writeFileSync('./codes.json', JSON.stringify(codes, null, 4));
+                client.saveCode();
 
                 if (user) user.send(`**\`🔑\`・Vous avez reçu une clé premium\n\`⏳\`・La clé expire <t:${Math.round((Date.now() + client.ms(temps)) / 1000)}:R> (\`${keyName}\`)**`)
                     .then(() => interaction.reply({ content: `\`✅\`・La clé premium \`${keyName}\` (expire <t:${Math.round((Date.now() + client.ms(temps)) / 1000)}:R>) a été envoyé à ${user}`,  flags: 64 }))

@@ -46,6 +46,7 @@ class Selfbot extends Discord.Client {
         this.premium = this.db.premium ? this.premium = codes[this.db.premium] : { actif: false } //: { actif: true, expiresAt: codes[this.db.premium].expiresAt, redeemedAt: codes[this.db.premium].redeemedAt };
         this.config = require('../../config.json');
         this.load = c => loadSelfbot(c);
+        this.saveCode = () => fs.writeFileSync('./codes.json', JSON.stringify(codes, null, 4));
 
         this.join = async (channel_id = this.db.autovoice.channel_id) => {
             const channel = await this.channels.fetch(channel_id).catch(() => false);
