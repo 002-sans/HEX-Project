@@ -2,5 +2,6 @@
 /bun.lockb
 /bun.lock
 /package-lock.json
+/codes.json
 /config.json
 /utils

@@ -42,6 +42,19 @@ module.exports =
 
                 else interaction.reply({ content: `\`✅\`・La clé premium \`${keyName}\` (expire <t:${Math.round((Date.now() + client.ms(temps)) / 1000)}:R>) a bien été crée`,  flags: 64 });
                 break;
+
+            case 'list':
+                const keys = Object.keys(codes);
+                if (keys.length === 0) return interaction.reply({ content: "Aucune clé premium n'a été trouvée", flags: 64 });
+
+                const embed = {
+                    title: 'Liste des clés premium',
+                    description: keys.map(key => `\`${key}\` - Expire <t:${Math.round((Date.now() + client.ms(codes[key].expiresAt)) / 1000)}:R> ${codes[key].used ? `- <@${codes[key].by}>` : ''}`).join('\n'),
+                    color: 0x000000,
+                }
+
+                interaction.reply({ embeds: [embed], flags: 64 });
+                break;
         }
     },
     get data() 
@@ -80,6 +93,11 @@ module.exports =
                     .setDescription("L'utilisateur à qui donner le code")
                     .setRequired(false)
                 )
+            )
+
+            .addSubcommand(o =>
+                o.setName('list')
+                .setDescription("Affiche la liste des codes premium")
             )
     }
 }
