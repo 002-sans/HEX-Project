@@ -1,5 +1,4 @@
 const { SlashCommandBuilder, Client, Message, ChatInputCommandInteraction } = require("discord.js");
-const codes = require('../../codes.json');
 const fs = require('node:fs');
 
 module.exports = 
@@ -23,6 +22,7 @@ module.exports =
     */
     async executeSlash(client, interaction) 
     {
+        const codes = JSON.parse(fs.readFileSync('./codes.json', 'utf-8'));
         switch(interaction.options.getSubcommand())
         {
             case 'create':

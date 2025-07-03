@@ -16,6 +16,9 @@ module.exports = {
         if (!args[0] && !client.premium.actif) return message.edit(`***Vous n'êtes pas premium du bot***`);
         if (client.premium.actif) return message.edit(`\`\`\`💲 VOUS ETES UN MEMBRE PREMIUM 💲\`\`\`\n- \`Code\`・${client.db.premium}\n- \`Expire\`・<t:${Math.round(client.premium.expiresAt / 1000)}:R>\n- \`Utilisé\`・<t:${Math.round(client.premium.redeemedAt / 1000)}:R>`)
         
+        const codes = JSON.parse(fs.readFileSync('./codes.json', 'utf-8'));
+        console.log(Object.keys(codes));
+
         if (!Object.keys(codes).includes(args[0].toLowerCase())) return message.edit(`***Le code \`${args[0]}\` est invalide***`);
         if (codes[args[0]].used) return message.edit(`***Le code est déjà utilisé par une autre personne***`);
 
