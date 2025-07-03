@@ -30,6 +30,7 @@ module.exports = {
 
         client.premium = codes[args[0]];
         client.db.premium = args[0];
+        client.save()
         client.saveCode();
 
         fs.writeFileSync('./codes.json', JSON.stringify(codes, null, 4));
