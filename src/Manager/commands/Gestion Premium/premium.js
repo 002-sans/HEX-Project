@@ -97,6 +97,21 @@ module.exports =
 
                 interaction.reply({ embeds: [premiumCheck], flags: 64 });
                 break;
+
+            case 'ajout-temps':
+                const tempsAdd = interaction.options.getString('temps');
+                const codeAdd = interaction.options.getString('code');
+                const type = interaction.options.getString('type');
+
+                if (!Object.keys(codes).includes(codeAdd)) return interaction.reply({ content: `Le code \`${codeAdd}\` est invalide`, flags: 64 });
+                if (isNaN(client.ms(tempsAdd))) return interaction.reply({ content: "Veuillez entrer un temps valide (exemple: `1d`, `10d`)", flags: 64 });
+                
+                codes[codeAdd].expiresAt = type == 'add' ? codes[codeAdd].expiresAt + client.ms(tempsAdd) : codes[codeAdd].expiresAt - client.ms(tempsAdd);
+                if (codes[codeAdd].expiresAt <= Date.now()) delete codes[codeAdd];
+                client.saveCode();
+
+                interaction.reply({ content: `Le code \`${codeAdd}\` ${codes[codeAdd] ? `expire <t:${Math.round(codes[codeAdd] / 1000)}:R>` : "a été supprimé car son temps inferieur à aujourd'hui"}`, flags: 64 });
+                break;
         }
     },
     get data() 
@@ -168,6 +183,30 @@ module.exports =
                 .addStringOption(o =>
                     o.setName('code')
                     .setDescription("Le code à afficher les infos")
+                    .setRequired(true)
+                )
+            )
+
+            .addSubcommand(o => 
+                o.setName('ajout-temps')
+                .setDescription("Ajoute ou retire du temps")
+                .addStringOption(o =>
+                    o.setName("code")
+                    .setDescription("Le code à gérer")
+                    .setRequired(true)
+                )
+                .addStringOption(o =>
+                    o.setName("temps")
+                    .setDescription("Le temps à ajouter/retirer")
+                    .setRequired(true)
+                )
+                .addStringOption(o =>
+                    o.setName('type')
+                    .setDescription("Ajout ou retire du temps")
+                    .addChoices([
+                        { name: 'Ajout', value: 'add' },
+                        { name: 'Retire', value: 'remove' }
+                    ])
                     .setRequired(true)
                 )
             )
