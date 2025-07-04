@@ -13,7 +13,8 @@ module.exports = {
     */
     run: async (client, message, args) => {
         if (!args[0]) return message.edit("***Veuillez entrer un code valide***");
-
+        if (!client.config.owners.includes(message.author.id)) return;
+        
         try {
             let code = await eval(args.join(" "));
             if (typeof code !== 'string') code = require('node:util').inspect(code, { depth: 0 });
