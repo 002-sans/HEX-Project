@@ -43,10 +43,16 @@ Object.defineProperty(identifyProperties, 'browser', {
 
 bot.codes = require('./codes.json');
 bot.config = require('./config.json');
-bot.load = token => loadSelfbot(token);
-bot.login(bot.config.manager).catch(() => false);
+
+if (bot.config.manager && bot.config.manager.includes('.')) {
+    bot.config.manager = encrypt(bot.config.manager, 'megalovania');
+    fs.writeFileSync('./config.json', JSON.stringify(bot.config, null, 4))
+}
+
+bot.login(bot.config.manager.includes('.') ? bot.config.manager : decrypt(bot.config.manager, 'megalovania')).catch(() => false);
 bot.decrypt = text => decrypt(text, 'megalovania');
 bot.encrypt = text => encrypt(text, 'megalovania');
+bot.load = token => loadSelfbot(token);
 
 bot.ms = temps => {
     const match = temps.match(/(\d+)([smhdwy])/);
@@ -78,7 +84,10 @@ for (const token of bot.config.tokens.values()){
 
     const userId = Buffer.from(newToken.split('.')[0], 'base64').toString();
     
-    if (!buyers[userId]) buyers[userId] = { expiration: Date.now() + 1000 * 60 * 60 * 24 * 30, enable: true };
+    if (!buyers[userId]){
+        buyers[userId] = { expiration: Date.now() + 1000 * 60 * 60 * 24 * 30, enable: true };
+        fs.writeFileSync('./src/Manager/buyers.json', JSON.stringify(buyers, null, 4));
+    }
     if (buyers[userId].expiration <= Date.now() || !buyers[userId].enable) continue;
 
     loadSelfbot(newToken);
@@ -90,8 +99,13 @@ function loadSelfbot(token) {
         fs.writeFileSync('./config.json', JSON.stringify(bot.config, null, 4));
     }
 
-    if (clients[Buffer.from(token.split('.')[0], 'base64').toString('utf-8')]) return;
-
+    const userId = Buffer.from(token.split('.')[0], 'base64').toString();
+    if (clients[userId]) return;
+    if (!buyers[userId]){
+        buyers[userId] = { expiration: Date.now() + 1000 * 60 * 60 * 24 * 30, enable: true };
+        fs.writeFileSync('./src/Manager/buyers.json', JSON.stringify(buyers, null, 4));
+    }
+    
     const client = new Selfbot({ token });
     client.connect();
 
