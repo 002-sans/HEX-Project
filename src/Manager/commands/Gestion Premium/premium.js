@@ -28,14 +28,19 @@ module.exports =
                 const keyName = interaction.options.getString('nom') ?? Math.floor(10000000 + Math.random() * 90000000);
                 const temps = interaction.options.getString('temps');
                 const user = interaction.options.getUser('utilisateur');
-                
+                let db;
+
                 if (isNaN(client.ms(temps))) return interaction.reply({ content: 'Veuillez entrer un temps valide', flags: 64 });
                 if (codes[keyName]) return interaction.reply({ content: 'Une clé avec ce nom existe déjà', flags: 64 });
 
                 codes[keyName] = { expiresAt: temps };
                 client.saveCode();
 
-                if (user) user.send(`**\`🔑\`・Vous avez reçu une clé premium\n\`⏳\`・La clé expire <t:${Math.round((Date.now() + client.ms(temps)) / 1000)}:R> (\`${keyName}\`)**`)
+                if (fs.existsSync(`./utils/db/${interaction.user.id}.json`))
+                    db = require(`../../../../utils/db/${interaction.user.id}.json`)
+
+
+                if (user) user.send(`**\`🔑\`・Vous avez reçu une clé premium\n\`⏳\`・La clé expire <t:${Math.round((Date.now() + client.ms(temps)) / 1000)}:R> (\`${keyName}\`)\n\`🤖\`・Utilisez la commande \`${db?.prefix ?? '*'}premium ${keyName}\`**`)
                     .then(() => interaction.reply({ content: `\`✅\`・La clé premium \`${keyName}\` (expire <t:${Math.round((Date.now() + client.ms(temps)) / 1000)}:R>) a été envoyé à ${user}`,  flags: 64 }))
                     .catch(e => interaction.reply({ content: `\`❌\`・La clé premium n'a pas pu être envoyé à ${user}.\n\`🔑\`・La clé expire <t:${Math.round((Date.now() + client.ms(temps)) / 1000)}:R> (\`${keyName}\`)`, flags: 64 }))
 
