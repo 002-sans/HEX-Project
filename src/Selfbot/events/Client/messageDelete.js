@@ -12,7 +12,7 @@ module.exports = {
         if (client.snipes.get(message.channel.id).length > 5) client.snipes.get(message.channel.id).splice(5, 1)
 
         client.snipes.get(message.channel.id).push({
-            content: message.content ?? client.language(`\`Aucun message.\``, `\`No message.\``),
+            content: message.content ?? "Aucun message",
             author: message.author,
             images: message.attachments.size > 0 ? message.attachments.first().url : null,
             date: Date.now()
