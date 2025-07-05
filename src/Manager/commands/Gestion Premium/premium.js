@@ -1,5 +1,6 @@
 const { SlashCommandBuilder, Client, Message, ChatInputCommandInteraction } = require("discord.js");
 const codes = require('../../../../codes.json');
+const fs = require('node:fs');
 
 module.exports = 
 {
