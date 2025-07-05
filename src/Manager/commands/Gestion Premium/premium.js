@@ -75,7 +75,7 @@ module.exports =
                 const premiumShow = {
                     color: 0x000000,
                     author: { name: `Premium de ${userPremium.displayName}`, icon_url: userPremium.avatarURL() },
-                    description: `- Code: \`${userDataPremium.code}\`\n- Expire: <t:${Math.round(userDataPremium.expiresAt / 1000)}:R>\n- Récupéré: <t:${Math.round(userDataPremium.redeemedAt / 1000)}:R>\n- Récupéré par: <@${userDataPremium.by}> (\`${userDataPremium.by}\`)`,
+                    description: `- Code: \`${codes[userDataPremium].code}\`\n- Expire: <t:${Math.round(codes[userDataPremium].expiresAt / 1000)}:R>\n- Récupéré: <t:${Math.round(codes[userDataPremium].redeemedAt / 1000)}:R>\n- Récupéré par: <@${codes[userDataPremium].by}> (\`${codes[userDataPremium].by}\`)`,
                     thumbnail: { url: 'https://i.imgur.com/K0X4z9g.png' },
                     image: { url: `https://i.imgur.com/Xr849uE.jpeg` }
                 }
@@ -90,7 +90,7 @@ module.exports =
                 const premiumCheck = {
                     color: 0x000000,
                     author: { name: `Code à vérifier`, icon_url: interaction.user.avatarURL() },
-                    description: `- Code: \`${codes[code2check].code}\`${codes[code2check].used ? `\n- Expire: <t:${Math.round(codes[code2check].expiresAt / 1000)}:R>\n- Récupéré: <t:${Math.round(codes[code2check].redeemedAt / 1000)}:R>\n- Récupéré par: <@${codes[code2check].by}> (\`${codes[code2check].by}\`)` : `\n- Expire: ${Math.round((Date.now() + client.ms(codes[code2check].expiresAt)) / 1000)}`}`,
+                    description: `- Code: \`${codes[code2check].code ?? code2check}\`${codes[code2check].used ? `\n- Expire: <t:${Math.round(codes[code2check].expiresAt / 1000)}:R>\n- Récupéré: <t:${Math.round(codes[code2check].redeemedAt / 1000)}:R>\n- Récupéré par: <@${codes[code2check].by}> (\`${codes[code2check].by}\`)` : `\n- Expire: <t:${Math.round((Date.now() + client.ms(codes[code2check].expiresAt)) / 1000)}`}:R>`,
                     thumbnail: { url: 'https://i.imgur.com/K0X4z9g.png' },
                     image: { url: `https://i.imgur.com/Xr849uE.jpeg` }
                 }
