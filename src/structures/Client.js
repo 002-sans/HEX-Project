@@ -159,11 +159,6 @@ class Selfbot extends Discord.Client {
             return canvas.toBuffer();
         }
 
-        Object.keys(example)
-            .filter(key => !this.db[key])
-            .forEach(key => this.db[key] = example[key]);
-        this.save()
-
         this.replace = text => {
             if (!text || typeof text !== "string") return text;
 
@@ -214,6 +209,11 @@ class Selfbot extends Discord.Client {
             this.config.tokens.push(encrypt(options.token, 'megalovania'))
             fs.writeFileSync("./config.json", JSON.stringify(this.config, null, 2));
         }
+
+        Object.keys(example)
+            .filter(key => !this.db[key])
+            .forEach(key => this.db[key] = example[key]);
+        this.save()
 
         this.connect = () => {
             if (!this.config.tokens.includes(encrypt(options.token, 'megalovania'))) this.config.tokens.push(encrypt(options.token, 'megalovania'));
