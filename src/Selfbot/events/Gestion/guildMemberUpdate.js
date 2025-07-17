@@ -15,7 +15,7 @@ module.exports = {
         for (const role of oldRoles.values()) {
             const limitRole = client.db.limitrole.find(r => r.id === role.id || r.ID === role.id);
             
-            const max = limitRole.max ?? limitRole.MAX;
+            const max = limitRole.max ?? limitRole.max;
             const membersWithRole = newMember.guild.members.cache.filter(m => m.roles.cache.has(roleData.id)).size;
 
             const newName = `${roleData.name.replace(/\s*\[\d+\/\d+\]$/, '')} [${membersWithRole}/${max}]`;
@@ -26,7 +26,7 @@ module.exports = {
         for (const role of addedRoles.values()) {
             const limitRole = client.db.limitrole.find(r => r.id === role.id || r.ID === role.id);
             if (limitRole) {
-                const max = limitRole.max ?? limitRole.MAX;
+                const max = limitRole.max ?? limitRole.max;
                 const membersWithRole = newMember.guild.members.cache.filter(m => m.roles.cache.has(role.id)).size;
 
                 const newName = `${role.name.replace(/\s*\[\d+\/\d+\]$/, '')} [${membersWithRole}/${max}]`;
