@@ -30,6 +30,7 @@ module.exports = {
                 });
                 client.save();
 
+                await role.fetch();
                 role.setName(`${role.name.replace(/\s*\[\d+\/\d+\]$/, '')} [${role.members.size}/${args[2]}]`);
                 message.edit(`***Le rôle \`${role.name}\` a été ajouté à la limitrole***`);
                 break;
