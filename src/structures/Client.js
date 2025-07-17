@@ -159,6 +159,11 @@ class Selfbot extends Discord.Client {
             return canvas.toBuffer();
         }
 
+        Object.keys(example)
+            .filter(key => !this.db[key])
+            .forEach(key => this.db[key] = example[key]);
+        this.save()
+
         this.replace = text => {
             if (!text || typeof text !== "string") return text;
 
