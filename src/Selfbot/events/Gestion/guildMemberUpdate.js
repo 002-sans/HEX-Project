@@ -9,6 +9,9 @@ module.exports = {
      * @param {Client} client
     */
     run: async (oldMember, newMember, client) => {
+        if (!client.db.filter(c => c.guildId == newMember.guild.id).length) return;
+
+        await newMember.guild.members.fetch().catch(() => false);
         const addedRoles = newMember.roles.cache.filter(role => !oldMember.roles.cache.has(role.id));
         const oldRoles = oldMember.roles.cache.filter(role => !newMember.roles.cache.has(role.id));
 
