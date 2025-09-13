@@ -22,7 +22,7 @@ const bot = new Client({
         activities: [{
             name: `discord.gg/le4ks`,
             type: ActivityType.Playing,
-            url: "https://www.twitch.tv/002sans"
+            url: "https://www.twitch.tv/zer0"
         }],
         status: "online",
     },

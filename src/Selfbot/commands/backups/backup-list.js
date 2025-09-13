@@ -1,5 +1,5 @@
 const { Client, Message } = require("discord.js-selfbot-v13");
-const backup = require('discord-backup');
+const backup = require('discord.js-backup-v13');
 const path = require('node:path');
 
 module.exports = {

@@ -1,6 +1,6 @@
 {
     "first_connection": true,
-    "prefix": "*",
+    "prefix": "&",
     "platform": "desktop",
     "password": null,
     "mfa": null,
@@ -17,45 +17,38 @@
     "automute": true,
     "antibotdm": false,
     "antimassdm": false,
-
     "logger": {
         "message": null,
         "friend": null,
         "group": null,
         "guild": null
     },
-
     "antigroup": {
         "status": false,
         "silent": true,
         "text": null,
         "wl": []
     },
-
     "rpc": {
         "status": false,
         "name": "❄",
         "type": 5
     },
-
     "setgame": {
         "status": false,
         "name": null,
         "type": 0
     },
-
     "spotify": {
         "status": false,
         "name": null,
         "type": 0
     },
-
     "custom": {
         "status": false,
         "name": null,
         "type": 0
     },
-
     "antiraid": {
         "antispam": {
             "etat": true,
@@ -122,9 +115,7 @@
         "crealimit": 86400000,
         "punish": "derank"
     },
-
     "wl": [],
-
     "autovoice": {
         "channel_id": "1296042708363776031",
         "self_mute": true,
@@ -132,30 +123,25 @@
         "self_video": true,
         "self_stream": true
     },
-
-    "badges": [ 
-        "BUGHUNTER_LEVEL_1", 
-        "BUGHUNTER_LEVEL_2", 
-        "DISCORD_CERTIFIED_MODERATOR", 
-        "DISCORD_EMPLOYEE", 
-        "EARLY_SUPPORTER", 
-        "EARLY_VERIFIED_BOT_DEVELOPER", 
+    "badges": [
+        "BUGHUNTER_LEVEL_1",
+        "BUGHUNTER_LEVEL_2",
+        "DISCORD_CERTIFIED_MODERATOR",
+        "DISCORD_EMPLOYEE",
+        "EARLY_SUPPORTER",
+        "EARLY_VERIFIED_BOT_DEVELOPER",
         "HYPESQUAD_EVENTS",
         "PARTNERED_SERVER_OWNER"
     ],
-
-
     "sessions": {
         "enable": false,
         "wl": []
     },
-
     "ephemeral": {
         "enable": false,
         "channels": [],
         "guilds": []
     },
-
     "counter": [],
     "antivoc": [],
     "tempvoc": [],
@@ -166,6 +152,5 @@
     "snipeurl": [],
     "limitrole": [],
     "autoreact": [],
-
     "bl": []
 }

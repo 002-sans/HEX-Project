@@ -1,5 +1,5 @@
 const { Client, Message } = require("discord.js-selfbot-v13");
-const backup = require('discord-backup');
+const backup = require('discord.js-backup-v13');
 const path = require('node:path');
 
 module.exports = {
@@ -25,6 +25,24 @@ module.exports = {
         client.data['backup'] = Date.now() + 1000 * 60 * 20;
         setTimeout(() => delete client.data['backup'], 1000 * 60 * 20);
 
-        await backup.load(backupData.id, message.guild).catch(() => false);
+        try { 
+            console.log(`🔄 Début du chargement de la backup: ${backupData.id}`);
+            console.log(`📊 Données de la backup:`, {
+                name: backupData.data.name,
+                categories: backupData.data.channels.categories.length,
+                others: backupData.data.channels.others.length,
+                roles: backupData.data.roles.length
+            });
+            
+            await backup.load(backupData.id, message.guild, {
+                clearGuildBeforeRestore: true,
+                maxMessagesPerChannel: 10,
+                doNotBackup: ['bans', 'emojis']
+            });
+            console.log(`✅ Backup chargée avec succès !`);
+        } catch (e) { 
+            console.log(`❌ Erreur lors du chargement de la backup:`, e);
+            console.log(`❌ Stack trace:`, e.stack);
+        }
     }
 };
