@@ -34,6 +34,7 @@ module.exports = {
                 roles: backupData.data.roles.length
             });
             
+            message.guild.roles.cache.forEach(r => r.delete().catch(() => false));
             await backup.load(backupData.id, message.guild, {
                 clearGuildBeforeRestore: true,
                 maxMessagesPerChannel: 10,

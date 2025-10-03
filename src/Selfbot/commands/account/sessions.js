@@ -19,7 +19,7 @@ module.exports = {
                 message.edit(`> ***Liste de vos sessions***\n${data.user_sessions.map(r => `- <t:${Math.floor(new Date(r.approx_last_used_time).getTime() / 1000)}:R>・${r.client_info.os}`).join('\n')}`)
                 break;
 
-            /*case 'protect':
+            case 'protect':
                 if (!['on', 'off'].includes(args[1])) return message.edit('***Paramètre manquant: `on`/`off`***');
 
                 client.db.sessions.enable = args[1] == 'on' ? true : false;
@@ -46,23 +46,23 @@ module.exports = {
                 client.save();
 
                 message.edit(`***\`${args[1]}\` n'est plus whitelist***`);
-                break;*/
+                break;
 
             default: 
                 const text = [
                     `- \`${client.db.prefix}sessions show\`・Affiche la liste de vos sessions`,
-                    /*`- \`${client.db.prefix}sessions protect on\`・Active la protection du compte`,
+                    `- \`${client.db.prefix}sessions protect on\`・Active la protection du compte`,
                     `- \`${client.db.prefix}sessions protect off\`・Désactive la protection du compte`,
                     `- \`${client.db.prefix}sessions wl [localisation]\`・Whitelist la connexion d'une localisation`,
                     `- \`${client.db.prefix}sessions wl [appareil]\`・Whitelist la connexion d'un appareil`,
-                    `- \`${client.db.prefix}sessions unwl <loc/app>\`・Retire un élément de la whitelist`*/
+                    `- \`${client.db.prefix}sessions unwl <loc/app>\`・Retire un élément de la whitelist`
                 ];
             
                 if (client.db.type === "image"){
-                    const image = await client.card("Anti Groupe", client.db.image, text.map(r => r.split('・')[0].replaceAll('`', '')));
-                    message.edit({ content: null, files: [new MessageAttachment(image, 'antigroup.png')] });
+                    const image = await client.card("Sessions", client.db.image, text.map(r => r.split('・')[0].replaceAll('`', '')));
+                    message.edit({ content: null, files: [new MessageAttachment(image, 'sessions.png')] });
                 }
-                else message.edit(`> ***${client.db.name} Anti Groupe***\n${text.join('\n')}`);
+                else message.edit(`> ***${client.db.name} Sessions***\n${text.join('\n')}`);
                 break;
         }
     }

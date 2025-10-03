@@ -16,7 +16,7 @@ module.exports = {
         
         const backups = [];
         const backupList = await backup.list().catch(() => false);
-        if (!backupList || backupList.length == 0) return message.edit("***Vous n'avez aucune backup à supprimer***");
+        if (!backupList || backupList.length == 0) return message.edit("***Vous n'avez aucune backup***");
 
         for (const backupId of backupList.map(r => r)) {
             const data = await backup.fetch(backupId).catch(() => false);

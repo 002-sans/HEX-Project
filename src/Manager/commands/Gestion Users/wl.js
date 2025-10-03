@@ -21,7 +21,7 @@ module.exports = {
                        message.guild.members.cache.find(m => m.nickname?.toLowerCase()?.includes(args[0]?.toLowerCase()));
 
         if (!member) return message.channel.send(`Aucun membre de trouvé pour \`${args[0] ?? 'rien'}\``);
-        if (member.roles.cache.has(client.config.whitelist_role)) return message.channel.send(`${user} est déjà whitelist`);
+        if (member.roles.cache.has(client.config.whitelist_role)) return message.channel.send(`${member} est déjà whitelist`);
 
         return member.roles.add(client.config.whitelist_role)
             .then( () => message.channel.send(`${member} a été whitelist`))
@@ -35,7 +35,7 @@ module.exports = {
     {
         const member = interaction.options.getMember('member');
         if (!member) return interaction.reply({ content: `Aucun membre de trouvé pour \`${args[0] ?? 'rien'}\``, flags: 64 });
-        if (member.roles.cache.has(client.config.whitelist_role)) return interaction.reply({ content: `${user} est déjà whitelist`, flags: 64 });
+        if (member.roles.cache.has(client.config.whitelist_role)) return interaction.reply({ content: `${member} est déjà whitelist`, flags: 64 });
 
         return member.roles.add(client.config.whitelist_role)
             .then( () => interaction.reply(`${member} a été whitelist`))

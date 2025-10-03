@@ -15,11 +15,13 @@
     "notif": true,
     "antipub": false,
     "automute": true,
+    "autoquest": false,
     "antibotdm": false,
     "antimassdm": false,
     "logger": {
         "message": null,
         "friend": null,
+        "quest": null,
         "group": null,
         "guild": null
     },
@@ -30,9 +32,20 @@
         "wl": []
     },
     "rpc": {
-        "status": false,
-        "name": "❄",
-        "type": 5
+        "status": true,
+        "name": "1337",
+        "type": 5,
+        "assets": {
+            "large_image": "mp:external/oqkvIVs9lGqY0nzCkJ60YzE5xO-FWsBPlcjjL5NhRG0/https/i.postimg.cc/tTWJSjY0/57e1ebfb1407a45028c495e887852469.jpg"
+        },
+        "buttons": [
+            "</> Serveur </>"
+        ],
+        "metadata": {
+            "button_urls": [
+                "https://discord.gg/prevnames-1294586125234737232"
+            ]
+        }
     },
     "setgame": {
         "status": false,
