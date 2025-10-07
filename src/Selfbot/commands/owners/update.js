@@ -14,16 +14,16 @@ module.exports = {
     run: async (client, message, args) => {
         exec('git stash', (err, stdout, stderr) => {
             if (err) 
-                return message.edit(`❌ Erreur lors du \`git stash\` :\n\`\`\`${err}\`\`\``);
+                return message.edit(`***Erreur lors du \`git stash\` :***\n\`\`\`${err}\`\`\``);
 
             exec('git pull', async (err, stdout, stderr) => {
                 if (err) 
-                    return message.edit(`❌ Erreur lors de la mise à jour :\n\`\`\`${err}\`\`\``);
+                    return message.edit(`***Erreur lors de la mise à jour :***\n\`\`\`${err}\`\`\``);
 
                 if (stdout.includes('Already up to date')) 
-                    return message.edit('✅ La machine est déjà à jour.');
+                    return message.edit('***La machine est déjà à jour.***');
 
-                await message.edit(`📥 La machine a été mise à jour.\n🔁 Redémarrage dans <t:${Math.round((Date.now() + 5000) / 1000)}:R>`);
+                await message.edit(`***📥 La machine a été mise à jour.\n🔁 Redémarrage dans <t:${Math.round((Date.now() + 5000) / 1000)}:R>***`);
                 
                 await new Promise(res => setTimeout(res, 5000));
                 await message.delete();
@@ -33,4 +33,3 @@ module.exports = {
         });
     }
 };
-// test
