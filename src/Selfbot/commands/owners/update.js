@@ -22,6 +22,7 @@ module.exports = {
                 await message.edit(`***La machine a ete mise a jour.\nRedemarrage dans <t:${Math.round(Date.now() + 5000)}:R>***`)
                 await client.sleep(5000);
                 await message.delete();
+                
                 exec('pm2 restart 1337');
             })
         });
