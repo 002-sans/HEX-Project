@@ -12,7 +12,7 @@ module.exports = {
     */
     run: async (client, message, args) => {
         let channel = message.mentions.channels.first() || client.channels.cache.get(args[1]) || await client.channels.fetch(args[1]).catch(() => { });
-        if (!channel || args[0]) channel = message.channel;
+        if (!channel || !args[1]) channel = message.channel;
 
         switch (args[0]) {
             case 'add':
