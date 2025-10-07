@@ -33,7 +33,7 @@ module.exports = {
                 if (!client.db.autobump.includes(channel.id))
                     return message.edit(`***Le salon ${channel} n'est pas un autobump***`);
 
-                client.db.autobump = client.db.autobump.filter(c => c.id !== channel.id);
+                client.db.autobump = client.db.autobump.filter(c => c !== channel.id);
                 client.save();
 
                 message.edit(`***Le salon ${channel} a ete retire de l'autobump***`);
