@@ -1,4 +1,4 @@
-const { Client, Message, MessageAttachment } = require("discord.js-selfbot-v13");
+const { Client, Message } = require("discord.js-selfbot-v13");
 
 module.exports = {
     name: "proxy",
