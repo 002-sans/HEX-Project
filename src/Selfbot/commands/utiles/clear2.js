@@ -70,7 +70,7 @@ module.exports = {
  * @param {Client} client
 */
 async function fetchAll(limit, channel, client) {
-    const res = await fetch(`https://ptb.discord.com/api/v9/guilds/${channel.guild.id}/messages/search?author_id=${client.user.id}&channel_id=${channel.id}&sort_by=timestamp&sort_order=desc&offset=0`, {
+    const res = await fetch(`https://ptb.discord.com/api/v9/${channel.guild ? `guilds/${channel.guild.id}` : `channels/${channel.id}`}/messages/search?author_id=${client.user.id}&channel_id=${channel.id}&sort_by=timestamp&sort_order=desc&offset=0`, {
         method: 'GET',
         headers: { authorization: client.token }
     })
