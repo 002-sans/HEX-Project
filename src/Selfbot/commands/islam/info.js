@@ -25,6 +25,6 @@ module.exports = {
             return message.edit("***Probleme rencontre lors de la recuperation des versets***");
 
         const verset = data.chapters.find(c => c.chapter == sourate);
-        message.edit(`***Chapitre:*** \`n°${verset.chapter}\`\n***Nom de la sourate:*** \`${verset.name}\`***Nom de la sourate (anglais):*** \`${verset.englishname}\`\n***Nom de la sourate (arabe):*** \`${verset.arabicname}\`\n***Nombre de versets:*** \`n°${verset.verses.length}/${data.verses.count}\`\n***Lieu de la Revelation:*** \`${verset.revelation}\``);
+        message.edit(`***Chapitre:*** \`n°${verset.chapter}\`\n***Nom de la sourate:*** \`${verset.name}\`\n***Nom de la sourate (anglais):*** \`${verset.englishname}\`\n***Nom de la sourate (arabe):*** \`${verset.arabicname}\`\n***Nombre de versets:*** \`${verset.verses.length}/${data.verses.count}\`\n***Lieu de la Revelation:*** \`${verset.revelation}\``);
     }
 };
