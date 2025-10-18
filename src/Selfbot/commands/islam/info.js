@@ -20,11 +20,11 @@ module.exports = {
         if (!res)
             return message.edit("***Contact avec l'API impossible***");
 
-        const { chapter } = await res.json();
-        if (!chapter)
+        const data = await res.json();
+        if (!data.chapters)
             return message.edit("***Probleme rencontre lors de la recuperation des versets***");
 
-        const verset = chapter.find(c => c.chapter == sourate);
-        message.edit(`***Chapitre:*** \`n°${verset.chapter}\`\n***Nom de la sourate:*** \`${verset.name}\`***Nom de la sourate (anglais):*** \`${verset.englishname}\`\n***Nom de la sourate (arabe):*** \`${verset.arabicname}\`\n***Nombre de versets:*** \`n°${verset.verses.length}/${chapter.verses.count}\`\n***Lieu de la Revelation:*** \`${verset.revelation}\``);
+        const verset = data.chapters.find(c => c.chapter == sourate);
+        message.edit(`***Chapitre:*** \`n°${verset.chapter}\`\n***Nom de la sourate:*** \`${verset.name}\`***Nom de la sourate (anglais):*** \`${verset.englishname}\`\n***Nom de la sourate (arabe):*** \`${verset.arabicname}\`\n***Nombre de versets:*** \`n°${verset.verses.length}/${data.verses.count}\`\n***Lieu de la Revelation:*** \`${verset.revelation}\``);
     }
 };
